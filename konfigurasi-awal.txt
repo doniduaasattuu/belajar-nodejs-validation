@@ -1,0 +1,23 @@
+npm init
+
+tambahkan "type": "module", di package.json
+
+https://babeljs.io/setup#installation
+npm install --save-dev jest @types/jest
+npm install --save-dev babel-jest 
+ubah scripts di package.json 
+{
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
+  }
+}
+npm install @babel/preset-env --save-dev
+buat file babel.config.json dan isinya
+{
+  "presets": ["@babel/preset-env"]
+}
